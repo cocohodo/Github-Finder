@@ -15,11 +15,11 @@ body {
     height: 100%;
     align-items: center;
     background-color: white;
-    padding:30%;
+    padding:35%;
     display: none;
 }
 .Spinner {
-    width: 300px;
+    width: 500px;
     animation: Spinner 0.8s ease infinite;
 }
 @keyframes Spinner {
@@ -175,13 +175,38 @@ div.User-Profile-Button-Text {
 
 /* 잔디밭 contributions */
 .User-Contributions {
+    display: flex;
+    flex-direction: column;
 }
 .User-Contributions-Image {
     box-sizing: border-box;
     margin: 10px 15px 10px 15px;
     width: 96%;
 }
+.User-Contributions-Compare-Container {
+    display: flex;
+    gap: 15px;
+    margin: 10px 15px;
+}
+.User-Contributions-Compare-Button {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgb(1,184,117);
+    color: white;
+}
+.User-Contributions-Compare-Image {
+    box-sizing: border-box;
+    margin: 10px 15px 10px 15px;
+    width: 96%;
+}
 
+/* 레포지토리 repository */
 h2.Repos-Title {
     margin-left: 15px;
     margin-top: 0px;

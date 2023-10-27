@@ -163,10 +163,52 @@ function updateUserRepos(repo) {
     list.append(repoElement);
 }
 
+//잔디밭 추가
 function updateContributions(name) {
     const contributions = document.querySelector('.User-Contributions');
     const contributionsImage = document.createElement('img');
     contributionsImage.classList.add('User-Contributions-Image');
     contributionsImage.src = 'https://ghchart.rshah.org/219138/' + name;
+    const contributionsCompareContainer = document.createElement('div');
+    contributionsCompareContainer.classList.add('User-Contributions-Compare-Container');
+    const contributionsCompareButton = document.createElement('div');
+    contributionsCompareButton.classList.add('User-Contributions-Compare-Button');
+    contributionsCompareButton.innerText = 'Compare Grassplot';
+    const contributionsCompareInput = document.createElement('input');
+    contributionsCompareInput.classList.add('User-Contributions-Compare-Input');
+
+    contributionsCompareContainer.append(contributionsCompareInput);
+    contributionsCompareContainer.append(contributionsCompareButton);
+
     contributions.append(contributionsImage);
+    contributions.append(contributionsCompareContainer);
+
+    contributionsCompareButton.addEventListener('click', () => {
+        const name = contributionsCompareInput.value;
+        const compareCheck = document.querySelector('.User-Contributions-Compare-Image');
+        if (compareCheck === null) {
+            const compareImage = document.createElement('img');
+            compareImage.classList.add('User-Contributions-Compare-Image');
+            compareImage.src = 'https://ghchart.rshah.org/4582ec/' + name;
+            contributions.append(compareImage);
+        }
+        else {
+            compareCheck.src = 'https://ghchart.rshah.org/4582ec/' + name;
+        }
+    })
+    contributionsCompareInput.addEventListener('change', () => {
+        const name = contributionsCompareInput.value;
+        const compareCheck = document.querySelector('.User-Contributions-Compare-Image');
+        if (compareCheck === null) {
+            const compareImage = document.createElement('img');
+            compareImage.classList.add('User-Contributions-Compare-Image');
+            compareImage.src = 'https://ghchart.rshah.org/4582ec/' + name;
+            contributions.append(compareImage);
+        }
+        else {
+            compareCheck.src = 'https://ghchart.rshah.org/4582ec/' + name;
+        }
+    })
 }
+
+
