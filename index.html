@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Github Finder</title>
+</head>
+<body>
+    <div class="Spinner-Container">
+        <img class="Spinner" src="spinner.jpg">
+    </div>
+    <div class="Header">Github Finder</div>
+    <div class="Search-Container">
+        <H2 class="Search-Title">Search GitHub Users</H2>
+        <p class="Search-Info">Enter a username to fetch a user profile and repos</p>
+        <input type="text" class="Search-Input" placeholder="GitHub username">
+    </div>
+    <div class="User-Info-Container">
+        <div class="User-Profile-Container">
+            <img class="User-Profile-Image" src="blank-profile.png">
+            <a class="User-Profile-Button">
+                <div class="User-Profile-Button-Text">View Profile</div>
+            </a>
+        </div>
+        <div class="User-Status-Container">
+            <div class="User-Status-Header">
+                <div class="User-Status-Header-Repos">Public Repos: </div>
+                <div class="User-Status-Header-Gists">Public Gists: </div>
+                <div class="User-Status-Header-Followers">Followers: </div>
+                <div class="User-Status-Header-Following">Following: </div>
+            </div>
+            <div class="User-Status-Details">
+                <div class="User-Status-Details-Company">Company: </div>
+                <div class="User-Status-Details-Website">Website/Blog: </div>
+                <div class="User-Status-Details-Location">Location: </div>
+                <div class="User-Status-Details-Since">Member Since: </div>
+            </div>
+        </div>
+    </div>
+    <div class="User-Contributions"></div>
+    <h2 class="Repos-Title">Latest Repos</h2>
+    <div class="Repos-List"></div>
+    <footer>
+        <div class="Footer-Container">GitHub Finder©</div>
+    </footer>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
