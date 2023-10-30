@@ -8,14 +8,14 @@ body {
 }
 
 .Spinner-Container {
-    position: absolute;
+    position: fixed;
     top: 200px;
     z-index: 1;
     width: 100%;
     height: 100%;
     align-items: center;
     background-color: white;
-    padding:35%;
+    padding:40%;
     display: none;
 }
 .Spinner {
@@ -245,7 +245,7 @@ h2.Repos-Title {
     align-items: center;
     padding: 15px;
     display: flex;
-    width: 50%;
+    width: 25%;
     margin-right: 30px;
 }
 
